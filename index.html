@@ -9,9 +9,7 @@
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
-      background: linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 15%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.4) 70%, rgba(255,255,255,0.2) 85%, rgba(255,255,255,0.1) 100%), 
-                  url('images/fintech-bg.png') no-repeat center center fixed;
-      background-size: cover;
+      background-color: #f7f9fc;
       color: #1e293b;
     }
     header {
@@ -69,16 +67,38 @@
       margin: 0 auto;
       color: #e2e8f0;
     }
-    .showcase {
-      display: flex;
-      justify-content: center;
+    .section {
       padding: 4rem 2rem;
-      background-color: white;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    .showcase img {
-      max-width: 100%;
+    .service-box {
+      background: white;
       border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      padding: 2rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    .service-box:hover {
+      transform: translateY(-5px);
+    }
+    .service-box h3 {
+      color: #1a1a40;
+      margin-bottom: 0.5rem;
+    }
+    .service-box p {
+      color: #475569;
+      font-size: 0.95rem;
+    }
+    .service-box a {
+      display: inline-block;
+      margin-top: 1rem;
+      text-decoration: none;
+      color: #00a291;
+      font-weight: 600;
     }
   </style>
 </head>
@@ -100,8 +120,37 @@
     <p class="tagline">Where Fintech Meets Intelligent Execution</p>
     <p>Fintech'e özel strateji, organizasyon, teknoloji ve iletişim danışmanlığı.</p>
   </div>
-  <div class="showcase">
-    <img src="images/fintech-bg.png" alt="Fintech Görseli">
-  </div>
+  <section class="section">
+    <div class="service-box">
+      <h3>Strateji & Organizasyon</h3>
+      <p>Fintek'ler için vizyona uygun yapı, süreç ve OKR sistemleri kurarız.</p>
+      <a href="services.html#strategy">Detaylı İncele</a>
+    </div>
+    <div class="service-box">
+      <h3>Erken Aşama Danışmanlık</h3>
+      <p>Pre-seed/seed aşamasında ürün-pazar uyumu, yatırım hikayesi ve MVP desteği sunarız.</p>
+      <a href="services.html#early-stage">Detaylı İncele</a>
+    </div>
+    <div class="service-box">
+      <h3>İş Geliştirme</h3>
+      <p>Aktif fintek'ler için büyüme, iş ortaklıkları ve satış stratejileri geliştiririz.</p>
+      <a href="services.html#growth">Detaylı İncele</a>
+    </div>
+    <div class="service-box">
+      <h3>Teknoloji & Altyapı</h3>
+      <p>Regülasyon uyumlu, doğru mimari ve çözüm ortağı seçimleri ile teknik yapılar kurarız.</p>
+      <a href="services.html#tech">Detaylı İncele</a>
+    </div>
+    <div class="service-box">
+      <h3>İnsan Kaynağı</h3>
+      <p>Doğru ekip yapısı, liderlik gelişimi ve kültür mimarisiyle sürdürülebilir kadrolar inşa ederiz.</p>
+      <a href="services.html#team">Detaylı İncele</a>
+    </div>
+    <div class="service-box">
+      <h3>İletişim & Marka</h3>
+      <p>Stratejiye uygun içerik, mecra ve dil seçimiyle yatırımcı ve kullanıcıya doğru sesleniriz.</p>
+      <a href="services.html#communication">Detaylı İncele</a>
+    </div>
+  </section>
 </body>
 </html>
