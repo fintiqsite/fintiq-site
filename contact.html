@@ -200,6 +200,14 @@
   document.getElementById("fintiq-form").addEventListener("submit", function(e) {
     e.preventDefault();
     const form = e.target;
+
+    // Honeypot alan kontrolü
+    const honeypot = form.website.value;
+    if (honeypot !== "") {
+      console.warn("Spam algılandı.");
+      return;
+    }
+
     const data = {
       ilgi: form.ilgi.value,
       adsoyad: form.adsoyad.value,
