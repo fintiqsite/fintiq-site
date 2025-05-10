@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hakkımızda | FintiQ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom, rgba(12,14,26,0.5), rgba(12,14,26,0.7)), url('images/digital-fintech-bg-v3.jpg') no-repeat center center fixed;
+      background-size: cover;
+      background-color: #0f172a;
+      color: #f1f5f9;
+    }
+    header { /* aynı stil korunuyor */ padding: 0.75rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 10; background-color: #111827; }
+    .logo img { height: 60px; object-fit: contain; display: block; }
+    .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; color: #e5e7eb; cursor: pointer; }
+    nav { display: flex; align-items: center; }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; align-items: center; }
+    nav ul li a { text-decoration: none; color: #e5e7eb; font-weight: 500; font-size: 0.95rem; }
+    nav ul li a:hover { color: #38bdf8; }
+    @media (max-width: 768px) {
+      .menu-toggle { display: block; margin-left: auto; }
+      .menu-toggle.active { background-color: #38bdf8; border-radius: 12px; padding: 0.5rem; width: 48px; height: 48px; display: flex; justify-content: center; align-items: center; }
+      nav { display: none; flex-direction: column; background-color: #111827; padding: 1rem; border-radius: 8px; position: absolute; top: 100%; right: 0; width: 100px; z-index: 9; }
+      nav ul { flex-direction: column; align-items: flex-start; gap: 1rem; margin: 0; }
+      nav.active { display: flex; }
+    }
+    .page-content { padding: 5rem 2rem; max-width: 900px; margin: 0 auto; background: rgba(12,14,26,0.75); border-radius: 16px; }
+    .page-content h1 { color: #38bdf8; margin-bottom: 1.5rem; }
+    .page-content h2 { color: #f1f5f9; margin-bottom: 1rem; }
+    .page-content p { color: #d1d5db; line-height: 1.7; margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/fintiq_logo_transparent.png" alt="FintiQ Logo">
+    </a>
+  </div>
+  <button class="menu-toggle">☰</button>
+  <nav>
+    <ul>
+      <li><a href="services.html">Hizmetlerimiz</a></li>
+      <li><a href="about.html">Hakkımızda</a></li>
+      <li><a href="contact.html">İletişim</a></li>
+      <li><a href="en.html">EN</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="page-content">
+  <h1>Hakkımızda</h1>
+  <h2>FinTech Deneyimini Geleceğin FinTech Şirketleriyle Buluşturuyoruz</h2>
+  <p>FintiQ, finansal teknolojiler alanında hızlı büyüyen girişimler ve ölçeklenmiş şirketler için <strong>uzman danışmanlık çözümleri sunmak amacıyla</strong> kurulmuştur.</p>
+  <p>Günümüzde FinTech sektörü baş döndürücü bir hızla büyürken, bu büyümenin ihtiyaç duyduğu <strong>nitelikli insan kaynağı</strong> aynı hızda karşılanamamaktadır. Ancak diğer tarafta, sektörün dinamiklerini bilen, pazarda sayısız çözümü hayata geçirmiş, <strong>saha deneyimi yüksek profesyoneller</strong> hâlen aktif olarak kariyerlerine devam etmektedir.</p>
+  <p>FintiQ, <strong>ihtiyaç duyan FinTech şirketleriyle</strong>, bu değerli <strong>profesyonel kapasiteyi bir araya getiren bir platform</strong> oluşturmayı hedeflemektedir.</p>
+  <p>FintiQ’nun kurucuları, uzun yıllar <strong>bankacılık ve finansal kuruluşlarda üst düzey yöneticilik</strong> yapmış, sektöre yön veren deneyimli liderlerden oluşmaktadır. Buna ek olarak, hâlen <strong>aktif olarak profesyonel kariyerlerine devam eden uzmanlardan</strong> oluşan <strong>Danışma Kurulu</strong> ile FintiQ, müşterilerine <strong>güncel, uygulanabilir ve sahadan gelen danışmanlık ve rehberlik hizmetleri</strong> sunmaktadır.</p>
+  <p>Amacımız; tecrübesini sadece teoride değil, <strong>sahada başarıyla uygulamış uzmanlarla</strong>, büyümek ve sürdürülebilir başarıyı yakalamak isteyen FinTech şirketlerini <strong>buluşturmak ve yol arkadaşlığı yapmaktır</strong>.</p>
+  <p>FinTech alanında <strong>strateji, organizasyon, teknoloji, iş geliştirme ve regülasyon</strong> gibi kritik alanlarda <strong>uçtan uca danışmanlık hizmetleri</strong> sunarak, sektörün büyüme hızına <strong>insan kaynağı ve bilgi birikimiyle eşlik ediyoruz</strong>.</p>
+</section>
+
+<footer style="background-color:#0f172a; color:#cbd5e1; text-align:center; padding:1.5rem 1rem; font-size:0.9rem;">
+  <p>© 2025 FintiQ. Tüm hakları saklıdır.</p>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    menuToggle.addEventListener('click', function() {
+      nav.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
+  });
+</script>
+
+</body>
+</html>
