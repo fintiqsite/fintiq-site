@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | FintiQ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    /* Styles remain the same as in the Turkish version */
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <a href="/index.html">
+      <img src="/images/fintiq_logo_transparent.png" alt="FintiQ Logo">
+    </a>
+  </div>
+  <button class="menu-toggle">☰</button>
+  <nav>
+    <ul>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/about/en/">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="/about/">TR</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="page-content">
+  <h1>About Us</h1>
+  <h2>Bringing FinTech Experience Together With the Next Generation of FinTech Companies</h2>
+  <p>FintiQ was founded to provide <strong>specialized consultancy services</strong> for rapidly growing startups and scaled companies in the financial technologies sector.</p>
+  <p>While the FinTech industry is growing at a breathtaking pace, the <strong>qualified human resources</strong> required for this growth are unfortunately not accessible at the same speed. However, there are <strong>highly experienced professionals</strong> who know the dynamics of the industry and have successfully executed numerous solutions in the market, still actively pursuing their careers.</p>
+  <p>FintiQ aims to be a platform that <strong>brings together FinTech companies in need</strong> of such expertise with these valuable <strong>professional capacities</strong>.</p>
+  <p>Founded by leaders who have served in <strong>senior executive positions</strong> in banking and financial institutions for many years, FintiQ also leverages its <strong>Advisory Board</strong>, composed of experts who continue their <strong>active professional careers</strong>, to deliver <strong>up-to-date, practical consultancy and guidance services</strong> to its clients.</p>
+  <p>Our mission is to connect companies aiming for growth and sustainable success with <strong>professionals who have successfully applied their expertise in the field</strong>, and to <strong>be their companion on this journey</strong>.</p>
+  <p>We offer <strong>end-to-end consultancy services</strong> in critical areas such as <strong>strategy, organization, technology, business development, and regulation</strong>, keeping pace with the industry's growth with our <strong>human capital and knowledge</strong>.</p>
+</section>
+
+<footer style="background-color:#0f172a; color:#cbd5e1; text-align:center; padding:1.5rem 1rem; font-size:0.9rem;">
+  <p>© 2025 FintiQ. All rights reserved.</p>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    menuToggle.addEventListener('click', function() {
+      nav.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
+  });
+</script>
+
+</body>
+</html>
