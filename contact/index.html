@@ -197,10 +197,36 @@
       <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
     </div>
     <div style="display:flex; flex-direction:column; gap:0.5rem;">
-      <label style="display:flex; align-items:center; gap:0.5rem;"><input type="radio" name="ilgi" value="danisma" required> Danışma Kurulu'na Katılmak İstiyorum</label>
-      <label style="display:flex; align-items:center; gap:0.5rem;"><input type="radio" name="ilgi" value="iletisim" required> FintiQ Ekibi Benimle İletişime Geçsin</label>
-    </div>
-    <input type="text" name="adsoyad" placeholder="Ad Soyad" required>
+  <label style="display:flex; align-items:center; gap:0.5rem;">
+    <input type="radio" name="ilgi" value="is_arayan" required> 
+    İş Arayanım (FintiQ’da veya Fintech ekosisteminde yer almak istiyorum)
+  </label>
+  <label style="display:flex; align-items:center; gap:0.5rem;">
+    <input type="radio" name="ilgi" value="danismanlik_hizmeti" required id="danismanlikOption"> 
+    Danışmanlık Hizmeti Almak İstiyorum
+  </label>
+  <label style="display:flex; align-items:center; gap:0.5rem;">
+    <input type="radio" name="ilgi" value="iletisim" required> 
+    FintiQ Ekibi Benimle İletişime Geçsin
+  </label>
+  <label style="display:flex; align-items:center; gap:0.5rem;">
+    <input type="radio" name="ilgi" value="danisma_kurulu" required> 
+    Danışma Kurulu'na Katılmak İstiyorum
+  </label>
+</div>
+    <div id="danismanlikServices" style="display:none; margin-top: 1rem;">
+  <select name="danismanlik_turu" required>
+    <option value="" disabled selected hidden>Danışmanlık Hizmetlerimiz</option>
+    <option value="Strateji">Strateji & Organizasyon</option>
+    <option value="Erken_Asama">Erken Aşama Danışmanlık</option>
+    <option value="Is_Gelistirme">İş Geliştirme</option>
+    <option value="Teknoloji">Teknoloji & Altyapı</option>
+    <option value="Insan_Kaynagi">İnsan Kaynağı</option>
+    <option value="Iletisim_Marka">İletişim & Marka</option>
+    <label><input type="checkbox" name="danismanlik_turu" value="Diger"> Diğer</label>
+  </div>
+  </select>
+</div>    <input type="text" name="adsoyad" placeholder="Ad Soyad" required>
     <input type="tel" name="telefon" placeholder="Cep Telefonu" required>
     <input type="email" name="email" placeholder="E-posta Adresiniz" required>
     <select name="kaynak" required>
