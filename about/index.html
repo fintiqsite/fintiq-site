@@ -54,6 +54,35 @@
       margin-bottom: 1rem;
       text-align: justify;
     }
+   footer {
+      background-color: #0f172a;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: 0.9rem;
+      position: fixed;     /* Sabitleme */
+      bottom: 0;           /* Sayfanın en altına yerleştirir */
+      left: 0;             /* Sol kenardan başlatır */
+      right: 0;            /* Sağ kenara kadar uzatır */
+      width: 100%;         /* Tam genişlik */
+      z-index: 9;          /* CTA altında ama içerikten yukarıda */
+      margin: 0;
+    }
+    
+    #cta-bubble {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1rem;
+      background-color: #38bdf8;
+      color: #0f172a;
+      padding: 0.75rem 1rem;
+      border-radius: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      cursor: pointer;
+      font-weight: 600;
+      z-index: 10;
+      font-size: 0.85rem;
+    } 
   </style>
 </head>
 <body>
