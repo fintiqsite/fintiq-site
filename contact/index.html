@@ -282,5 +282,21 @@
     });
   });
 </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const ilgiRadios = document.querySelectorAll('input[name="ilgi"]');
+    const danismanlikServices = document.getElementById('danismanlikServices');
+
+    ilgiRadios.forEach(radio => {
+      radio.addEventListener('change', function () {
+        if (this.value === 'danismanlik') {
+          danismanlikServices.style.display = 'block';
+        } else {
+          danismanlikServices.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>
