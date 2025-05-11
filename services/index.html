@@ -113,7 +113,12 @@
       text-align: center;
       padding: 1.5rem 1rem;
       font-size: 0.9rem;
-      width: 100%;
+      position: fixed;     /* Sabitleme */
+      bottom: 0;           /* Sayfanın en altına yerleştirir */
+      left: 0;             /* Sol kenardan başlatır */
+      right: 0;            /* Sağ kenara kadar uzatır */
+      width: 100%;         /* Tam genişlik */
+      z-index: 9;          /* CTA altında ama içerikten yukarıda */
       margin: 0;
     }
 
