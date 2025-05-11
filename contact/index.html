@@ -6,55 +6,36 @@
   <title>FintiQ | İletişim</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
   <style>
-    /* Temel stil ayarları */
     body { font-family: 'Poppins', sans-serif; margin: 0; background-color: #0f172a; color: #f1f5f9; display: flex; flex-direction: column; min-height: 100vh; }
-    header, footer { background-color: #111827; padding: 1rem 2rem; text-align: center; }
+    header, footer { background-color: #111827; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
     main { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; }
-
     form { background: #1f2937; padding: 2rem; border-radius: 16px; max-width: 500px; width: 100%; display: grid; gap: 1rem; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
-    input, select { padding: 0.75rem; height: 48px; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem; background-color: #fff; color: #0f172a; box-sizing: border-box; }
-    button { padding: 0.75rem; border-radius: 8px; border: none; font-size: 1rem; background-color: #38bdf8; color: #0f172a; font-weight: 600; cursor: pointer; height: 48px; }
-    button:hover { background-color: #60d1fb; }
-
-    #form-message, #loading-indicator { margin-top: 1rem; color: #38bdf8; font-size: 0.9rem; text-align: center; display: none; }
-
-    /* Menü stilleri */
-    header { display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 10; }
-    .logo img { height: 60px; object-fit: contain; }
+    input, select { padding: 0.75rem; height: 48px; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem; background: #fff; color: #0f172a; box-sizing: border-box; }
+    button { padding: 0.75rem; border-radius: 8px; border: none; font-size: 1rem; background: #38bdf8; color: #0f172a; font-weight: 600; cursor: pointer; height: 48px; }
+    button:hover { background: #60d1fb; }
+    #form-message { margin-top: 1rem; color: #38bdf8; display: none; text-align: center; }
+    #loading-indicator { display: none; text-align: center; margin-top: 1rem; color: #38bdf8; }
     .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; color: #e5e7eb; cursor: pointer; }
     nav { display: flex; align-items: center; }
-    nav ul { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; align-items: center; }
     nav ul li a { text-decoration: none; color: #e5e7eb; font-weight: 500; font-size: 0.95rem; }
     nav ul li a:hover { color: #38bdf8; }
-
     @media (max-width: 768px) {
       .menu-toggle { display: block; margin-left: auto; }
-      nav ul { display: none; flex-direction: column; background-color: #111827; padding: 1rem; border-radius: 8px; width: 100%; position: absolute; top: 100%; right: 0; }
+      nav ul { display: none; flex-direction: column; background: #111827; padding: 1rem; border-radius: 8px; position: absolute; top: 100%; right: 0; width: 100%; }
       nav ul.active { display: flex; }
     }
- 
-form label {
-  display: flex;
-  align-items: flex-start; 
-  gap: 0.5rem;
-  line-height: 1.4;
-  padding: 0.25rem 0;
-}
-
-form label input[type="radio"] {
-  margin-top: 0.2rem; 
-}
   </style>
 </head>
 <body>
   <header>
-    <div class="logo"><a href="/index.html"><img src="/images/fintiq_logo_transparent.png" alt="FintiQ Logo"></a></div>
+    <div class="logo"><a href="/index.html"><img src="/images/fintiq_logo_transparent.png" alt="FintiQ Logo" style="height: 60px;"></a></div>
     <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">☰</button>
     <nav>
       <ul>
         <li><a href="/services/index.html">Hizmetlerimiz</a></li>
         <li><a href="/about/index.html">Hakkımızda</a></li>
-        <li><a href="/contact.html">İletişim</a></li>
+        <li><a href="/contact/index.html">İletişim</a></li>
         <li><a href="/about/en/index.html">EN</a></li>
       </ul>
     </nav>
@@ -62,59 +43,56 @@ form label input[type="radio"] {
 
   <main>
     <form id="fintiq-form">
-      <h2 style="text-align:center; font-size:1.5rem; margin-bottom:1rem;">Size nasıl yardımcı olabiliriz?</h2>
-      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+      <h2 style="text-align:center;">Size nasıl yardımcı olabiliriz?</h2>
+      <div style="position:absolute; left:-5000px;" aria-hidden="true">
         <label for="website">Leave this field empty</label>
         <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
       </div>
-
-      <div style="display:flex; flex-direction:column; gap:0.5rem;">
-        <label><input type="radio" name="ilgi" value="is_arayan" required> Fintech ekosisteminde kariyer fırsatlarını değerlendirmek istiyorum</label>
-        <label><input type="radio" name="ilgi" value="danismanlik_hizmeti" required> Danışmanlık Hizmeti Almak İstiyorum</label>
+      <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+        <label><input type="radio" name="ilgi" value="kariyer" required> Fintech Ekosisteminde Kariyer Fırsatlarını Değerlendirmek İstiyorum</label>
+        <label><input type="radio" name="ilgi" value="danismanlik" required> Danışmanlık Hizmeti Almak İstiyorum</label>
         <label><input type="radio" name="ilgi" value="iletisim" required> FintiQ Ekibi Benimle İletişime Geçsin</label>
         <label><input type="radio" name="ilgi" value="danisma_kurulu" required> Danışma Kurulu'na Katılmak İstiyorum</label>
       </div>
 
-      <div id="kariyerRoles" style="display:none; margin-top: 1rem;">
-        <select name="kariyer_rol" required>
-          <option value="" disabled selected hidden>Rol</option>
-          <option value="Ust_Duzey_Yonetici">Üst Düzey Yönetici</option>
-          <option value="Pazarlama">Pazarlama</option>
-          <option value="Satis">Satış</option>
-          <option value="Is_Gelistirme">İş Geliştirme</option>
-          <option value="Urun_Yonetimi">Ürün Yönetimi</option>
-          <option value="Operasyon">Operasyon</option>
-          <option value="Mali_Isler">Mali İşler</option>
-          <option value="Uyum_Risk">Uyum ve Risk</option>
-          <option value="Diger">Diğer</option>
+      <div id="kariyerRoles" style="display: none;">
+        <select name="kariyer_rol">
+          <option value="" disabled selected hidden>Rolünüzü seçin</option>
+          <option>Üst Düzey Yönetici</option>
+          <option>Pazarlama</option>
+          <option>Satış</option>
+          <option>İş Geliştirme</option>
+          <option>Ürün Yönetimi</option>
+          <option>Operasyon</option>
+          <option>Mali İşler</option>
+          <option>Uyum ve Risk</option>
+          <option>Diğer</option>
         </select>
       </div>
 
-      <div id="danismanlikServices" style="display:none; margin-top: 1rem;">
-        <select name="danismanlik_turu" required>
+      <div id="danismanlikServices" style="display: none;">
+        <select name="danismanlik_turu">
           <option value="" disabled selected hidden>Danışmanlık Hizmetlerimiz</option>
-          <option value="Strateji">Strateji & Organizasyon</option>
-          <option value="Erken_Asama">Erken Aşama Danışmanlık</option>
-          <option value="Is_Gelistirme">İş Geliştirme</option>
-          <option value="Teknoloji">Teknoloji & Altyapı</option>
-          <option value="Insan_Kaynagi">İnsan Kaynağı</option>
-          <option value="Iletisim_Marka">İletişim & Marka</option>
-          <option value="Diger">Diğer</option>
+          <option>Strateji & Organizasyon</option>
+          <option>Erken Aşama Danışmanlık</option>
+          <option>İş Geliştirme</option>
+          <option>Teknoloji & Altyapı</option>
+          <option>İnsan Kaynağı</option>
+          <option>İletişim & Marka</option>
+          <option>Diğer</option>
         </select>
       </div>
 
       <input type="text" name="adsoyad" placeholder="Ad Soyad" required>
       <input type="tel" name="telefon" placeholder="Cep Telefonu" required>
       <input type="email" name="email" placeholder="E-posta Adresiniz" required>
-
       <select name="kaynak" required>
         <option value="" disabled selected hidden>Bizi nereden duydunuz?</option>
-        <option value="Sosyal Medya">Sosyal Medya</option>
-        <option value="Fuar/Organizasyon">Fuar / Organizasyon</option>
-        <option value="Tavsiye">Tavsiye</option>
-        <option value="Diger">Diğer</option>
+        <option>Sosyal Medya</option>
+        <option>Fuar / Organizasyon</option>
+        <option>Tavsiye</option>
+        <option>Diğer</option>
       </select>
-
       <input type="text" name="kod" placeholder="İletişim Kodu">
       <button type="submit">Gönder</button>
       <div id="loading-indicator">Gönderiliyor...</div>
@@ -122,7 +100,7 @@ form label input[type="radio"] {
     <p id="form-message">FintiQ ekibi en kısa sürede sizinle iletişime geçecektir.</p>
   </main>
 
-  <footer style="background-color:#0f172a; color:#cbd5e1; display:flex; justify-content:center; align-items:center; text-align:center; padding:1.5rem 1rem; font-size:0.9rem; position:fixed; bottom:0; left:0; right:0; width:100%;">
+  <footer>
     <p>© 2025 FintiQ. Tüm hakları saklıdır.</p>
   </footer>
 
@@ -135,7 +113,6 @@ form label input[type="radio"] {
 
       const honeypot = form.website.value;
       if (honeypot !== "") {
-        console.warn("Spam algılandı.");
         loadingIndicator.style.display = 'none';
         return;
       }
@@ -165,13 +142,13 @@ form label input[type="radio"] {
 
     document.addEventListener("DOMContentLoaded", function () {
       const ilgiRadios = document.querySelectorAll('input[name="ilgi"]');
-      const danismanlikServices = document.getElementById('danismanlikServices');
       const kariyerRoles = document.getElementById('kariyerRoles');
+      const danismanlikServices = document.getElementById('danismanlikServices');
 
       ilgiRadios.forEach(radio => {
         radio.addEventListener('change', function () {
-          danismanlikServices.style.display = (this.value === 'danismanlik_hizmeti') ? 'block' : 'none';
-          kariyerRoles.style.display = (this.value === 'is_arayan') ? 'block' : 'none';
+          kariyerRoles.style.display = this.value === 'kariyer' ? 'block' : 'none';
+          danismanlikServices.style.display = this.value === 'danismanlik' ? 'block' : 'none';
         });
       });
     });
