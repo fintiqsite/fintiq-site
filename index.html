@@ -172,6 +172,55 @@
       opacity: 1;
       z-index: 1;
     }
+   #cta-bubble {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1rem;
+      background-color: #38bdf8;
+      color: #0f172a;
+      padding: 0.75rem 1rem;
+      border-radius: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      cursor: pointer;
+      font-weight: 600;
+      z-index: 10;
+      font-size: 0.85rem;
+    }
+
+  @media (max-width: 768px) {
+    #cta-bubble {
+      bottom: 4.5rem;
+      width: 48px;
+      height: 48px;
+      padding: 0;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      position: fixed;
+    }
+
+    #cta-bubble::after {
+      content: "";
+      position: absolute;
+      bottom: 60px;
+      right: 0;
+      background: #38bdf8;
+      color: #0f172a;
+      padding: 0.4rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    #cta-bubble.show-tooltip::after {
+      content: "İletişim için...";
+      opacity: 1;
+    }
+  }    
   </style>
 </head>
 <body>
@@ -249,9 +298,7 @@
   <p>© 2025 FintiQ. Tüm hakları saklıdır.</p>
 </footer>
 
-<div id="cta-bubble" style="position:fixed; bottom:1.5rem; right:1rem; background-color:#38bdf8; color:#0f172a; padding:0.75rem 1rem; border-radius:2rem; box-shadow:0 4px 12px rgba(0,0,0,0.3); cursor:pointer; font-weight:600; z-index:10; font-size:0.85rem;">
-  💬 Size nasıl yardımcı olabiliriz?
-</div>
+<div id="cta-bubble">💬</div>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -273,9 +320,9 @@
 
     const ctaBubble = document.getElementById('cta-bubble');
     ctaBubble.addEventListener('click', function() {
-      window.location.href = 'contact.html';
-    });
-  });
+    window.location.href = 'contact.html';
+   });
+  
 </script>
 
 </body>
