@@ -200,7 +200,10 @@
       font-size: 1.2rem;
       position: fixed;
     }
-
+    #cta-bubble::after {
+    content: none; /* Tooltip kaldırıldı */
+    }
+}    
     #cta-bubble::after {
       content: "";
       position: absolute;
@@ -214,11 +217,6 @@
       white-space: nowrap;
       opacity: 0;
       transition: opacity 0.3s;
-    }
-
-    #cta-bubble.show-tooltip::after {
-      content: "İletişim için...";
-      opacity: 1;
     }
   }    
   </style>
