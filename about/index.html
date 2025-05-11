@@ -121,6 +121,10 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    const ctaBubble = document.getElementById('cta-bubble');
+    ctaBubble.addEventListener('click', function() {
+      window.location.href = '/contact.html';
+    });
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
     menuToggle.addEventListener('click', function() {
