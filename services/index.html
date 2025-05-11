@@ -73,45 +73,11 @@
     }
 
     @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-        margin-left: auto;
-      }
-
-      .menu-toggle.active {
-        background-color: #38bdf8;
-        border-radius: 12px;
-        padding: 0.5rem;
-        width: 48px;
-        height: 48px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      nav {
-        display: none;
-        flex-direction: column;
-        background-color: #111827;
-        padding: 1rem;
-        border-radius: 8px;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100px;
-        z-index: 9;
-      }
-
-      nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-        margin: 0;
-      }
-
-      nav.active {
-        display: flex;
-      }
+      .menu-toggle { display: block; margin-left: auto; }
+      .menu-toggle.active { background-color: #38bdf8; border-radius: 12px; padding: 0.5rem; width: 48px; height: 48px; display: flex; justify-content: center; align-items: center; }
+      nav { display: none; flex-direction: column; background-color: #111827; padding: 1rem; border-radius: 8px; position: absolute; top: 100%; right: 0; width: 100px; z-index: 9; }
+      nav ul { flex-direction: column; align-items: flex-start; gap: 1rem; margin: 0; }
+      nav.active { display: flex; }
     }
 
     .page-content {
@@ -140,24 +106,37 @@
       margin-bottom: 1rem;
       text-align: justify;
     }
-    <div id="cta-bubble" style="position:fixed; bottom:1.5rem; right:1rem; background-color:#38bdf8; color:#0f172a; padding:0.75rem 1rem; border-radius:2rem; box-shadow:0 4px 12px rgba(0,0,0,0.3); cursor:pointer; font-weight:600; z-index:10; font-size:0.85rem;">
-      💬 Size nasıl yardımcı olabiliriz?
-    </div>    
+
     footer {
       background-color: #0f172a;
       color: #cbd5e1;
       text-align: center;
       padding: 1.5rem 1rem;
       font-size: 0.9rem;
+      width: 100%;
+      margin: 0;
+    }
+
+    #cta-bubble {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1rem;
+      background-color: #38bdf8;
+      color: #0f172a;
+      padding: 0.75rem 1rem;
+      border-radius: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      cursor: pointer;
+      font-weight: 600;
+      z-index: 10;
+      font-size: 0.85rem;
     }
   </style>
 </head>
 <body>
 <header>
   <div class="logo">
-    <a href="/index.html">
-      <img src="/images/fintiq_logo_transparent.png" alt="FintiQ Logo">
-    </a>
+    <a href="/index.html"><img src="/images/fintiq_logo_transparent.png" alt="FintiQ Logo"></a>
   </div>
   <button class="menu-toggle">☰</button>
   <nav>
@@ -222,23 +201,19 @@
   <p>Ayrıca, dönemsel iletişim ihtiyaçlarında, <strong>sektörü ve fintek dinamiklerini bilen</strong> doğru ajanslarla şirketleri bir araya getiriyor, <strong>etkin ajans yönetimi ve iş birliği kurulması</strong> konusunda gerekli desteği sağlıyoruz.</p>
 </section>
 
-<div id="cta-bubble" style="position:fixed; bottom:1.5rem; right:1rem; background-color:#38bdf8; color:#0f172a; padding:0.75rem 1rem; border-radius:2rem; box-shadow:0 4px 12px rgba(0,0,0,0.3); cursor:pointer; font-weight:600; z-index:10; font-size:0.85rem;">
-  💬 Size nasıl yardımcı olabiliriz?
-</div>
-<footer style="background-color:#0f172a; color:#cbd5e1; text-align:center; padding:1.5rem 1rem; font-size:0.9rem; width:100vw; margin:0; position:relative; z-index:1;">
+<div id="cta-bubble">💬 Size nasıl yardımcı olabiliriz?</div>
+
+<footer>
   <p>© 2025 FintiQ. Tüm hakları saklıdır.</p>
-</footer> 
-   <script>
+</footer>
+
+<script>
   document.addEventListener("DOMContentLoaded", function () {
     const ctaBubble = document.getElementById('cta-bubble');
     ctaBubble.addEventListener('click', function() {
       window.location.href = '/contact.html';
     });
-  });
-</script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
     menuToggle.addEventListener('click', function() {
